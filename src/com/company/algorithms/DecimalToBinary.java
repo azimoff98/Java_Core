@@ -1,8 +1,11 @@
 package com.company.algorithms;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class DecimalToBinary {
     public static void main(String[] args) {
-        convertToBinary(123564);
+        intToBinary(15);
     }
 
 
@@ -18,6 +21,16 @@ public class DecimalToBinary {
             System.out.print(arr[i]);
         }
 
+    }
+
+
+    private static void intToBinary(int i){
+        List<Integer> list = new ArrayList<>();
+        while(i > 0){
+            list.add(i%2);
+            i = i / 2;
+        }
+        list.forEach(System.out::print);
     }
 
 }
